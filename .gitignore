@@ -1,0 +1,13 @@
+# Fichiers générés
+bin/
+release/
+store/obj/
+store/out/
+*.msix
+*.msixbundle
+*.cer
+*.pfx
+
+# Google Drive / Windows
+desktop.ini
+Thumbs.db

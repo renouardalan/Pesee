@@ -1,0 +1,4 @@
+LIBRARY PeseeMenu
+EXPORTS
+    DllGetClassObject PRIVATE
+    DllCanUnloadNow PRIVATE
