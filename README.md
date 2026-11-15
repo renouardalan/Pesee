@@ -39,7 +39,7 @@ Désinstallation depuis **Paramètres > Applications**.
 > (cliquez sur **Informations complémentaires** → **Exécuter quand même**), et Smart App Control le bloque
 > complètement : utilisez alors la version PowerShell.
 
-Une version **Microsoft Store** est en préparation : signée par Microsoft, avec « Analyser la taille »
+Une version **Microsoft Store** est en cours de certification : signée par Microsoft, avec « Analyser la taille »
 directement dans le menu principal du clic droit de Windows 11.
 
 ## Utilisation
@@ -82,6 +82,12 @@ voir [store/SOUMISSION.md](store/SOUMISSION.md).
 | `store\` | Manifeste et guide de publication Microsoft Store |
 | `tools\` | Génération de l'icône et des logos |
 | `res\` | Icône et manifeste de l'exécutable |
+
+## Réalisé avec Claude
+
+Pesée a été développée avec [Claude](https://www.anthropic.com/claude), l'assistant IA d'Anthropic, dans
+Claude Code : code de l'application, module du clic droit Windows 11, paquet Microsoft Store et publication.
+Le détail est dans [CLAUDE.md](CLAUDE.md).
 
 ## Licence
 

@@ -13,9 +13,10 @@
 
 ## 1. Compte développeur (à faire soi-même)
 
-1. Aller sur https://partner.microsoft.com/dashboard et s'inscrire au programme « Applications et jeux ».
-2. Choisir le type de compte : **particulier** (gratuit pour les particuliers depuis 2024, à vérifier à
-   l'inscription) ou **entreprise** (payant, vérification de l'entreprise en plus).
+1. Aller sur https://storedeveloper.microsoft.com > **Démarrer** (inscription des développeurs du Store).
+   Se connecter seulement sur partner.microsoft.com sans être inscrit mène à un Accueil vide, sans espace de travail.
+2. Choisir le type de compte : **particulier** ou **entreprise** (les deux sont gratuits d'après le site
+   en novembre 2026 ; l'entreprise demande une vérification en plus).
    Le nom d'éditeur choisi s'affichera sur la fiche du Store.
 3. Vérification d'identité : pièce d'identité demandée, compter de quelques heures à quelques jours.
 
@@ -31,8 +32,12 @@
 ## 3. Fabriquer le paquet final
 
 ```
-powershell -NoProfile -ExecutionPolicy Bypass -File build-store.ps1 -IdentityName "<Name>" -Publisher "<Publisher>" -PublisherDisplayName "<PublisherDisplayName>"
+powershell -NoProfile -ExecutionPolicy Bypass -File build-store.ps1 -IdentityName "<Name>" -Publisher "<Publisher>" -PublisherDisplayName "<PublisherDisplayName>" -DisplayName "<nom réservé>"
 ```
+
+Valeurs actuelles : `-IdentityName "Wharro.Pesee" -Publisher "CN=D7033690-214B-466D-8795-282DC8C62D13"
+-PublisherDisplayName "Wharro" -DisplayName "Pesee"` (nom réservé : « Pesee », sans accent).
+`-DisplayName` doit être identique au nom réservé, sinon Partner Center refuse le paquet.
 
 Résultat : `store\out\Pesee_1.0.0.0.msixbundle` (x64 + ARM64). À chaque mise à jour, augmenter
 `-Version` (1.0.1.0, 1.1.0.0... le dernier chiffre reste 0).

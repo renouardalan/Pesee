@@ -11,6 +11,8 @@ param(
     [string]$IdentityName = 'Pesee.Test',
     [string]$Publisher = 'CN=Pesee Test',
     [string]$PublisherDisplayName = 'Pesée (test)',
+    # Doit être identique au nom réservé dans Partner Center (sinon le paquet est refusé à l'envoi).
+    [string]$DisplayName = 'Pesee',
     [string]$Version = '1.0.0.0',
     [string[]]$Archs = @('x64', 'arm64'),
     [switch]$Sign
@@ -88,6 +90,7 @@ if ($LASTEXITCODE -ne 0) { throw "Echec de compilation de PeseeMenu.dll ($arch)"
 
     $manifest = $template.Replace('{IdentityName}', $IdentityName).Replace('{Publisher}', [Security.SecurityElement]::Escape($Publisher)).
         Replace('{PublisherDisplayName}', [Security.SecurityElement]::Escape($PublisherDisplayName)).
+        Replace('{DisplayName}', [Security.SecurityElement]::Escape($DisplayName)).
         Replace('{Version}', $Version).Replace('{Arch}', $arch)
     [IO.File]::WriteAllText((Join-Path $layout 'AppxManifest.xml'), $manifest, (New-Object Text.UTF8Encoding $false))
 

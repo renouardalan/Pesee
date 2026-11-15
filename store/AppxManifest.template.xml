@@ -3,6 +3,7 @@
   Manifeste du paquet Microsoft Store de Pesée.
   Les valeurs entre accolades sont remplacées par build-store.ps1 :
     {IdentityName} {Publisher} {PublisherDisplayName}  -> fournies par Partner Center (Identité du produit)
+    {DisplayName}  -> nom réservé dans Partner Center, à l'identique
     {Version} {Arch}
 -->
 <Package
@@ -17,7 +18,7 @@
   <Identity Name="{IdentityName}" Publisher="{Publisher}" Version="{Version}" ProcessorArchitecture="{Arch}" />
 
   <Properties>
-    <DisplayName>Pesée</DisplayName>
+    <DisplayName>{DisplayName}</DisplayName>
     <PublisherDisplayName>{PublisherDisplayName}</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
     <Description>Affiche le poids de chaque dossier d'un clic droit dans l'Explorateur.</Description>
@@ -34,12 +35,12 @@
   <Applications>
     <Application Id="Pesee" Executable="Pesee.exe" EntryPoint="Windows.FullTrustApplication">
       <uap:VisualElements
-        DisplayName="Pesée"
+        DisplayName="{DisplayName}"
         Description="Affiche le poids de chaque dossier d'un clic droit dans l'Explorateur."
         BackgroundColor="transparent"
         Square150x150Logo="Assets\Square150x150Logo.png"
         Square44x44Logo="Assets\Square44x44Logo.png">
-        <uap:DefaultTile ShortName="Pesée" />
+        <uap:DefaultTile ShortName="{DisplayName}" />
       </uap:VisualElements>
 
       <Extensions>
