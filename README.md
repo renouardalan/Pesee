@@ -15,9 +15,18 @@ dans le même ordre que l'Explorateur, avec leur poids et une pastille de couleu
 
 ## Installation
 
+### Microsoft Store (recommandée)
+
+**[Installer Pesée depuis le Microsoft Store](https://apps.microsoft.com/detail/9PB0KP4THWRM)**
+
+Signée par Microsoft, mises à jour automatiques, et « Analyser la taille » directement dans le menu principal
+du clic droit de Windows 11. Si vous aviez installé une version ci-dessous, désinstallez-la d'abord.
+
+### Sans le Store
+
 Téléchargez la dernière version dans [Releases](../../releases), puis au choix :
 
-### Version PowerShell (recommandée)
+#### Version PowerShell
 
 Fonctionne même quand Windows bloque les applications non signées (Smart App Control).
 
@@ -30,22 +39,20 @@ Fonctionne même quand Windows bloque les applications non signées (Smart App C
 
 Désinstallation : même chose avec `uninstall.ps1`.
 
-### Version .exe
+#### Version .exe
 
 Téléchargez `Pesee.exe` et double-cliquez : il propose d'ajouter « Analyser la taille » au clic droit.
 Désinstallation depuis **Paramètres > Applications**.
 
 > Pesee.exe n'est pas signé numériquement. Windows peut afficher « Windows a protégé votre ordinateur »
 > (cliquez sur **Informations complémentaires** → **Exécuter quand même**), et Smart App Control le bloque
-> complètement : utilisez alors la version PowerShell.
-
-Une version **Microsoft Store** est en cours de certification : signée par Microsoft, avec « Analyser la taille »
-directement dans le menu principal du clic droit de Windows 11.
+> complètement : utilisez alors la version PowerShell (ou celle du Store).
 
 ## Utilisation
 
-- Windows 11 : clic droit → **Afficher plus d'options** (ou **Maj + clic droit**) → **Analyser la taille**.
-  Fonctionne sur un dossier, dans le vide d'un dossier ou sur un disque.
+- Version Store : clic droit sur un dossier ou dans le vide d'un dossier → **Analyser la taille**.
+- Versions sans le Store, sous Windows 11 : clic droit → **Afficher plus d'options** (ou **Maj + clic droit**)
+  → **Analyser la taille**. Fonctionne sur un dossier, dans le vide d'un dossier ou sur un disque.
 - Double-clic sur un dossier : on entre dedans. Retour : flèche en haut à gauche, touche Retour arrière
   ou bouton « précédent » de la souris.
 - Clic sur **Taille** : tri du plus lourd au plus léger. Clic sur **Nom** : ordre de l'Explorateur.
